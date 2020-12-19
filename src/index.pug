@@ -1,0 +1,12 @@
+extends partials/layout.pug
+block vars
+  -var title='Главная'
+block content
+  include blocks/hero/hero
+  +hero
+  include blocks/features/features
+  +features
+  include blocks/services/services
+  +services
+  include blocks/contacts/contacts
+  +contacts

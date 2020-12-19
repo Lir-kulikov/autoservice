@@ -1,0 +1,32 @@
+.features {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -25px;
+  }
+}
+
+.feature {
+  text-align: center;
+  width: 25%;
+  margin: 0 50px;
+
+  &__icon {
+    fill: #1c63b8;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}

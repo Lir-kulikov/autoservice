@@ -1,0 +1,63 @@
+// settings
+
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+//vendor styles
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+* {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+body {
+  font-family: var(--font-base);
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media('<tablet') {
+    padding: 0 10px;
+  }
+}
+
+.overflow-limiter {
+  overflow: hidden;
+}
+
+.title-section {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.relative {
+  position: relative;
+}
+
+// component blocks
+
+// layout blocks
+@import '../blocks/header/_header';
+@import '../blocks/footer/_footer';
+@import '../blocks/logo/_logo';
+@import '../blocks/hero/_hero';
+@import '../blocks/features/_features';
+@import '../blocks/services/_services';
+@import '../blocks/contacts/_contacts';
+

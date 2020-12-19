@@ -1,0 +1,25 @@
+mixin contacts
+ section.contacts
+  h2.contacts__title.title-section Контакты
+  #map.contacts__map(data-center="56.15729845689245,40.44173228880147" data-placemark="56.15751352241446,40.445472211330774")
+    .contacts__info.info-contacts
+      .info-contacts__title Контактная информация
+      ul.info-contacts__list
+        li.info-contacts__item
+          svg.info-contacts__icon
+            use(xlink:href="img/svg/sprite.svg#location")
+          .info-contacts__text г. Владимир, ул. Красносельская, д. 1
+        li.info-contacts__item
+          svg.info-contacts__icon
+            use(xlink:href="img/svg/sprite.svg#phone-call")
+          a.info-contacts__text(href="tel:+79999999999") +7 (999) 999-99-99
+        li.info-contacts__item
+          svg.info-contacts__icon
+            use(xlink:href="img/svg/sprite.svg#clock")
+          span.info-contacts__text Пн-Пт с 9:00 до 18:00
+        li.info-contacts__item
+          svg.info-contacts__icon
+            use(xlink:href="img/svg/sprite.svg#mail")
+          a.info-contacts__text(href="mailto:service@mail.ru") service@mail.ru
+
+      

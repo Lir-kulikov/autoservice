@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeSpeed;
+  text-size-adjust: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  appearance: none;
+  background: transparent;
+  font: inherit;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+}

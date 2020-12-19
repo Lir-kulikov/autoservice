@@ -1,0 +1,25 @@
+mixin header
+  header.header
+    .container
+      .header__inner
+        a.logo(href='#')
+          img.logo__img(src='img/logo.png' width='200px' height='50px')
+        nav.nav
+          ul.nav__list
+            li.nav__item
+              a(href='#').nav__link Услуги
+            li.nav__item
+              a(href='#').nav__link Цены
+            li.nav__item
+              a(href='#').nav__link Галерея
+            li.nav__item
+              a(href='#').nav__link Контакты
+        .adress
+          svg.adress__icon
+            use(xlink:href="img/svg/sprite.svg#location")
+          .adress__inner г. Владимир, <br> ул. Красносельская, д. 1
+        .call
+          svg.call__icon
+              use(xlink:href="img/svg/sprite.svg#phone-call")
+          a.call__number(href='tel:+7999999') +7-999-999-99
+          
