@@ -1,22 +1,37 @@
 .contacts {
+  position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
 
+  @include media('<tablet') {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
   &__map {
-    position: relative;
     height: 460px;
     width: 100%;
+
+    @include media('<tablet') {
+      height: 300px;
+    }
   }
 
   &__info {
     left: 20px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     z-index: 2;
     position: absolute;
     padding: 20px 25px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.8);
+
+    @include media('<tablet') {
+      position: static;
+      transform: translateY(0);
+      margin: 0 20px 20px 20px;
+    }
   }
 }
 

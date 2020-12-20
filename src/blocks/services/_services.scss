@@ -3,17 +3,35 @@
   padding-bottom: 80px;
   background-color: #e5e9f1;
 
+  @include media('<tablet') {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
   &__inner {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     margin: 0 -10px;
+
+    @include media('<600px') {
+      margin: 0;
+    }
   }
 
   &__item {
     width: calc(25% - 40px);
     margin: 0 20px;
     margin-bottom: 40px;
+
+    @include media('<desktop') {
+      width: calc(50% - 40px);
+    }
+
+    @include media('<600px') {
+      width: 100%;
+      margin: 0 0 40px 0;
+    }
   }
 }
 
@@ -29,21 +47,23 @@
   flex-direction: column;
   justify-content: space-between;
 
-  &:hover {
-    .service-card__btn-wrapper {
-      transform: translateY(-20px);
-    }
-
-    .service-card__list {
-      opacity: 0.1;
-    }
-
-    &::before {
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-
-    .service-card__title {
-      transform: translateY(40px);
+  @include media('>tablet') {
+    &:hover {
+      .service-card__btn-wrapper {
+        transform: translateY(-20px);
+      }
+  
+      .service-card__list {
+        opacity: 0.1;
+      }
+  
+      &::before {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+  
+      .service-card__title {
+        transform: translateY(40px);
+      }
     }
   }
 
@@ -71,6 +91,10 @@
   &__list {
     position: relative;
     transition: opacity .2s;
+
+    @include media('<tablet') {
+      display: none;
+    }
   }
 
   &__item {
@@ -87,6 +111,11 @@
     text-align: center;
     transform: translateY(200%);
     transition: transform .2s;
+
+    @include media('<tablet') {
+      position: static;
+      transform: translateY(0);
+    }
   }
 
   &__btn {
