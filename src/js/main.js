@@ -1,3 +1,4 @@
+import './scroll'
 import './dynamicAdapt.js'
 import './slider'
 import './map'
