@@ -3,7 +3,9 @@ mixin header
     .container
       .header__inner
         a.logo(href='#')
-          img.logo__img(src='img/logo.png')
+          svg.logo__icon
+            use(xlink:href="img/svg/sprite.svg#logo")
+          span.logo__text Чип и Дип
         nav.nav(data-da="mobile-menu, 1, 767.7")
           ul.nav__list
             li.nav__item
@@ -11,18 +13,18 @@ mixin header
             li.nav__item
               a(href='#services').nav__link Услуги
             li.nav__item
-              a(href='#').nav__link Галерея
+              a(href='#price').nav__link Цены
             li.nav__item
               a(href='#contacts').nav__link Контакты
         .header__info
           .adress(data-da="mobile-menu, 3, 767.7")
             svg.adress__icon
               use(xlink:href="img/svg/sprite.svg#location")
-            .adress__inner г. Владимир, <br> ул. Красносельская, д. 1
+            .adress__inner г. Владимир, <br> ул. Красносельская, д. 57а
           .call(data-da="mobile-menu, 2, 767.8")
             svg.call__icon
                 use(xlink:href="img/svg/sprite.svg#phone-call")
-            a.call__number(href='tel:+7999999') +7-999-999-99
+            a.call__number(href='tel:+79106700292') +7 (910) 670-02-92
         button.burger
           span.burger__line
         .mobile-menu

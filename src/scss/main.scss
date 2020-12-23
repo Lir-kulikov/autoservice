@@ -8,10 +8,6 @@
 //vendor styles
 @import '../../node_modules/swiper/swiper-bundle.css';
 
-* {
-  outline: none;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   appearance: none;
@@ -21,8 +17,21 @@ body {
   font-family: var(--font-base);
 }
 
-section {
-  scroll-margin-top: 70px;
+.anchor-offset {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+
+  @include media('<tablet') {
+    top: -50px;
+  }
+}
+
+.relative {
+  position: relative;
 }
 
 .container {
@@ -59,6 +68,19 @@ section {
   position: relative;
 }
 
+.btn {
+  color: #fff;
+  background-color: #1c63b8;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: lighten($color: #1c63b8, $amount: 10%);
+  }
+}
+
 // component blocks
 
 // layout blocks
@@ -68,5 +90,7 @@ section {
 @import '../blocks/hero/_hero';
 @import '../blocks/features/_features';
 @import '../blocks/services/_services';
+@import '../blocks/price/_price';
 @import '../blocks/contacts/_contacts';
+@import '../blocks/modal/_modal';
 

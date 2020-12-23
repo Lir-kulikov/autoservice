@@ -1,10 +1,25 @@
 .logo {
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 50px;
+  margin-left: -10px;
+  display: block;
+  flex-shrink: 0;
+  text-decoration: none;
+  white-space: nowrap;
 
-  @include media('<desktop') {
-    width: 140px;
-    height: 35px;
+  &__icon {
+    vertical-align: middle;
+    height: 50px;
+    width: 50px;
+    fill: #1C63B8;
+  }
+
+  &__text {
+    margin-left: -7px;
+    font-size: 26px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    line-height: 1;
   }
 }

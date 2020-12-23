@@ -15,7 +15,7 @@
     align-items: center;
 
     @include media('<tablet') {
-      padding: 10px 0;
+      padding: 4px 0;
     }
   }
 
@@ -51,6 +51,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include media('<desktop') {
+        margin-right: 20px;
+      }
     }
 
     @include media('<tablet') {
@@ -227,7 +231,7 @@
       padding-left: 30px;
       padding-right: 10px;
       margin-right: -10px;
-      padding-bottom: 12px;
+      padding-bottom: 16px;
       margin-bottom: 40px;
     }
 

@@ -1,5 +1,6 @@
 mixin contacts
- section#contacts.contacts
+ section.contacts.relative
+  .anchor-offset#contacts
   h2.contacts__title.title-section Контакты
   .contacts__info.info-contacts
     .info-contacts__title Контактная информация
@@ -7,11 +8,11 @@ mixin contacts
       li.info-contacts__item
         svg.info-contacts__icon
           use(xlink:href="img/svg/sprite.svg#location")
-        .info-contacts__text г. Владимир, ул. Красносельская, д. 1
+        .info-contacts__text г. Владимир, ул. Красносельская 57а
       li.info-contacts__item
         svg.info-contacts__icon
           use(xlink:href="img/svg/sprite.svg#phone-call")
-        a.info-contacts__text(href="tel:+79999999999") +7 (999) 999-99-99
+        a.info-contacts__text(href="tel:+79106700292") +7 (910) 670-02-92
       li.info-contacts__item
         svg.info-contacts__icon
           use(xlink:href="img/svg/sprite.svg#clock")
@@ -19,7 +20,7 @@ mixin contacts
       li.info-contacts__item
         svg.info-contacts__icon
           use(xlink:href="img/svg/sprite.svg#mail")
-        a.info-contacts__text(href="mailto:service@mail.ru") service@mail.ru
-  #map.contacts__map(data-center="56.15729845689245,40.44173228880147" data-placemark="56.15751352241446,40.445472211330774")
+        a.info-contacts__text(href="mailto:service@mail.ru") minohov33@mail.ru
+  #map.contacts__map
 
       

@@ -4,13 +4,11 @@ ymaps.ready(init);
 function init(){
     var map = document.querySelector('#map');
 
-    var mark = map.dataset.placemark.split(',');
-    mark[0] = +mark[0];
-    mark[1] = +mark[1];
+    var mark = [56.15691591312475,40.44542980786508];
 
     var myMap = new ymaps.Map("map", {
-        center: [56.15729845689245, 40.44173228880147],
-        zoom: 16,
+        center: [56.156934460025646,40.44484902984561],
+        zoom: 19,
         controls: []
     });
 
@@ -23,17 +21,17 @@ function init(){
   });
 
     var placemarkContent = ymaps.templateLayoutFactory.createClass(
-        '<div class="placemark-content" style="border-radius: 5px; padding: 5px; width: 130px; background-color: #1c63b8; color: #fff;">$[properties.iconContent]</div>'
+        '<div class="placemark-content" style="border-radius: 5px; padding: 5px; width: 90px; background-color: #fff; color: #000;">$[properties.iconContent]</div>'
     );
 
     var placemark = new ymaps.Placemark(mark, {
-        iconContent: 'Автосервис в красном селе'
+        iconContent: 'Автосервис Чип и Дип'
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: 'img/car-service.png',
-        iconImageSize: [50, 50],
-        iconImageOffset: [-20, -20],
-        iconContentOffset: [-35, 55],
+        iconImageHref: 'img/placemark.png',
+        iconImageSize: [45, 50],
+        iconImageOffset: [-30, -50],
+        iconContentOffset: [50, 5],
         iconContentLayout: placemarkContent
     });
 
@@ -42,10 +40,10 @@ function init(){
     function onResizeMap() {
         if (window.innerWidth > 768) { 
             //Set New center
-            myMap.setCenter([56.15729845689245, 40.44173228880147]);
+            myMap.setCenter([56.156934460025646,40.44484902984561]);
             var pixelCenter2 = myMap.getGlobalPixelCenter('#map');
             } else {
-                myMap.setCenter([56.15709488008944,40.4455302967665]);
+                myMap.setCenter([56.15694493831349,40.445423022574786]);
             }
         } onResizeMap();
 

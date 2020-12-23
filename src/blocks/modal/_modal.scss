@@ -1,0 +1,178 @@
+
+// для корректной работы модального окна
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  opacity: 1;
+  pointer-events: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  z-index: 99;
+  visibility: hidden;
+
+  &__shadow {
+    position: fixed;
+    border:none;
+    display: block;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 98;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    background-color: black;
+  }
+
+  &__shadow--show {
+    pointer-events: auto;
+    opacity: 0.6;
+  }
+
+  &__opened {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  &--active{
+    opacity: 1;
+  }
+
+  &--moved,
+  &--active {
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  &__wrap {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+    min-height: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__window {
+    padding: 30px 40px 40px 40px;
+    margin: 50px 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #fff;
+    width: 600px;
+    max-width: 90%;
+    overflow: visible;
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+    transform: scale(0.9);
+    opacity: 0;
+
+    @include media('<tablet') {
+      padding: 30px 20px 20px 20px;
+      margin: 20px 0;
+      max-width: 90%;
+    }
+  }
+
+  &--active &__window {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &__close {
+    display: block;
+    position: absolute;
+    padding: 20px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+
+    @include media('<tablet') {
+      padding: 10px;
+    }
+
+    &-icon {
+      fill: #000;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include media('<tablet') {
+      margin-top: 30px;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.form {
+  margin: 0;
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    color: #2e3237;
+    margin-bottom: 5px;
+  }
+
+  &__field {
+    border-radius: 5px;
+    width: 100%;
+    padding: 7px 17px;
+    display: block;
+    border: 1px solid #cccccc;
+    font-size: 18px;
+    font-weight: 400;
+    color: #2e3237;
+
+    &.error {
+      border: 1px solid rgb(231, 46, 0);
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    width: 100%;
+  }
+}
+
+.error-message {
+  position: absolute;
+  color: rgb(231, 46, 0);
+}

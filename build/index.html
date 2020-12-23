@@ -11,12 +11,15 @@
     <div class="overflow-limiter">
             <header class="header">
               <div class="container">
-                <div class="header__inner"><a class="logo" href="#"><img class="logo__img" src="img/logo.png"/></a>
+                <div class="header__inner"><a class="logo" href="#">
+                    <svg class="logo__icon">
+                      <use xlink:href="img/svg/sprite.svg#logo"></use>
+                    </svg><span class="logo__text">Чип и Дип</span></a>
                   <nav class="nav" data-da="mobile-menu, 1, 767.7">
                     <ul class="nav__list">
                       <li class="nav__item"><a class="nav__link" href="#features">Преимущества</a></li>
                       <li class="nav__item"><a class="nav__link" href="#services">Услуги</a></li>
-                      <li class="nav__item"><a class="nav__link" href="#">Галерея</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#price">Цены</a></li>
                       <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
                     </ul>
                   </nav>
@@ -25,12 +28,12 @@
                       <svg class="adress__icon">
                         <use xlink:href="img/svg/sprite.svg#location"></use>
                       </svg>
-                      <div class="adress__inner">г. Владимир, <br> ул. Красносельская, д. 1</div>
+                      <div class="adress__inner">г. Владимир, <br> ул. Красносельская, д. 57а</div>
                     </div>
                     <div class="call" data-da="mobile-menu, 2, 767.8">
                       <svg class="call__icon">
                         <use xlink:href="img/svg/sprite.svg#phone-call"></use>
-                      </svg><a class="call__number" href="tel:+7999999">+7-999-999-99</a>
+                      </svg><a class="call__number" href="tel:+79106700292">+7 (910) 670-02-92</a>
                     </div>
                   </div>
                   <button class="burger"><span class="burger__line"></span></button>
@@ -60,14 +63,14 @@
                       <div class="swiper-slide hero__slide" style="background-image: url(img/hero-2.jpg);">
                         <div class="container">
                           <div class="hero__body">
-                            <div class="hero__title">Кузовные работы любой сложности</div>
+                            <div class="hero__title">Кузовные работы и покраска</div>
                           </div>
                         </div>
                       </div>
                       <div class="swiper-slide hero__slide" style="background-image: url(img/hero-3.jpg);">
                         <div class="container">
                           <div class="hero__body">
-                            <div class="hero__title">Услуги автоэлектрика во Владимире</div>
+                            <div class="hero__title">Услуги автоэлектрика</div>
                           </div>
                         </div>
                       </div>
@@ -75,7 +78,8 @@
                     <div class="swiper-pagination"></div>
                   </div>
                 </section>
-                <div class="features" id="features">
+                <div class="features relative">
+                  <div class="anchor-offset" id="features"></div>
                   <div class="container">
                     <div class="features__inner">
                       <div class="features__item feature">
@@ -109,34 +113,35 @@
                     </div>
                   </div>
                 </div>
-                <section class="services" id="services">
+                <section class="services relative">
+                  <div class="anchor-offset" id="services"></div>
                   <div class="container">
                     <h2 class="title-section services__title">Услуги</h2>
                     <div class="services__inner">
                       <div class="services__item service-card" style="background-image: url(img/services-1.jpg);">
-                        <div class="service-card__title">Техническое обслуживание</div>
+                        <div class="service-card__title">Ремонт двигателя</div>
                         <ul class="service-card__list">
-                          <li class="service-card__item">Замена воздушного фильтра</li>
-                          <li class="service-card__item">Замена масляного насоса</li>
-                          <li class="service-card__item">Замена масляного фильтра</li>
-                          <li class="service-card__item">Замена помпы</li>
-                          <li class="service-card__item">Замена приводного ремня</li>
+                          <li class="service-card__item">Снятие и установка двигателя </li>
+                          <li class="service-card__item">Замена поршневых колец </li>
+                          <li class="service-card__item">Замена маслосъемных колпачков</li>
+                          <li class="service-card__item">Замена клапанной прокладки</li>
+                          <li class="service-card__item">Регулировка цепи</li>
                         </ul>
                         <div class="service-card__btn-wrapper">
-                          <button class="service-card__btn">Записаться</button>
+                          <button class="service-card__btn btn" data-modal="#modal-form">Записаться</button>
                         </div>
                       </div>
                       <div class="services__item service-card" style="background-image: url(img/services-2.jpg);">
-                        <div class="service-card__title">Подвеска</div>
+                        <div class="service-card__title">Рулевой механизм</div>
                         <ul class="service-card__list">
-                          <li class="service-card__item">Замена верхнего рычага подвески</li>
-                          <li class="service-card__item">Замена втулок стабилизатора</li>
-                          <li class="service-card__item">Замена заднего амортизатора</li>
-                          <li class="service-card__item">Замена нижнего рычага подвески</li>
-                          <li class="service-card__item">Замена опорного подшипника</li>
+                          <li class="service-card__item">Замена рулевой тяги</li>
+                          <li class="service-card__item">Замена маятника</li>
+                          <li class="service-card__item">Замена рулевой трапеции</li>
+                          <li class="service-card__item">Замена рулевой рейки </li>
+                          <li class="service-card__item">Замена рулевой колонки</li>
                         </ul>
                         <div class="service-card__btn-wrapper">
-                          <button class="service-card__btn">Записаться</button>
+                          <button class="service-card__btn btn" data-modal="#modal-form">Записаться</button>
                         </div>
                       </div>
                       <div class="services__item service-card" style="background-image: url(img/services-3.jpg);">
@@ -149,46 +154,46 @@
                           <li class="service-card__item">Замена приводного ремня</li>
                         </ul>
                         <div class="service-card__btn-wrapper">
-                          <button class="service-card__btn">Записаться</button>
+                          <button class="service-card__btn btn" data-modal="#modal-form">Записаться</button>
                         </div>
                       </div>
                       <div class="services__item service-card" style="background-image: url(img/services-4.jpg);">
-                        <div class="service-card__title">Подвеска</div>
+                        <div class="service-card__title">Трансмиссия</div>
                         <ul class="service-card__list">
-                          <li class="service-card__item">Замена верхнего рычага подвески</li>
-                          <li class="service-card__item">Замена втулок стабилизатора</li>
-                          <li class="service-card__item">Замена заднего амортизатора</li>
-                          <li class="service-card__item">Замена нижнего рычага подвески</li>
-                          <li class="service-card__item">Замена опорного подшипника</li>
+                          <li class="service-card__item">Замена сцепления </li>
+                          <li class="service-card__item">Замена и переборка КПП</li>
+                          <li class="service-card__item">Замена карданного вала</li>
+                          <li class="service-card__item">Замена троса сцепления </li>
+                          <li class="service-card__item">Замена датчика заднего хода </li>
                         </ul>
                         <div class="service-card__btn-wrapper">
-                          <button class="service-card__btn">Записаться</button>
+                          <button class="service-card__btn btn" data-modal="#modal-form">Записаться</button>
                         </div>
                       </div>
                       <div class="services__item service-card" style="background-image: url(img/services-1.jpg);">
-                        <div class="service-card__title">Техническое обслуживание</div>
+                        <div class="service-card__title">Электротехнические работы</div>
                         <ul class="service-card__list">
-                          <li class="service-card__item">Замена воздушного фильтра</li>
-                          <li class="service-card__item">Замена масляного насоса</li>
-                          <li class="service-card__item">Замена масляного фильтра</li>
-                          <li class="service-card__item">Замена помпы</li>
-                          <li class="service-card__item">Замена приводного ремня</li>
+                          <li class="service-card__item">Замена и переборка тромблера </li>
+                          <li class="service-card__item">Замена генератора </li>
+                          <li class="service-card__item">Замена стартера </li>
+                          <li class="service-card__item">Замена коммутатора </li>
+                          <li class="service-card__item">Замена щитка приборов</li>
                         </ul>
                         <div class="service-card__btn-wrapper">
-                          <button class="service-card__btn">Записаться</button>
+                          <button class="service-card__btn btn" data-modal="#modal-form">Записаться</button>
                         </div>
                       </div>
                       <div class="services__item service-card" style="background-image: url(img/services-2.jpg);">
-                        <div class="service-card__title">Подвеска</div>
+                        <div class="service-card__title">Тормозная система</div>
                         <ul class="service-card__list">
-                          <li class="service-card__item">Замена верхнего рычага подвески</li>
-                          <li class="service-card__item">Замена втулок стабилизатора</li>
+                          <li class="service-card__item">Замена троса ручного тормоза</li>
+                          <li class="service-card__item">Замена задних колодок </li>
                           <li class="service-card__item">Замена заднего амортизатора</li>
                           <li class="service-card__item">Замена нижнего рычага подвески</li>
                           <li class="service-card__item">Замена опорного подшипника</li>
                         </ul>
                         <div class="service-card__btn-wrapper">
-                          <button class="service-card__btn">Записаться</button>
+                          <button class="service-card__btn btn" data-modal="#modal-form">Записаться</button>
                         </div>
                       </div>
                       <div class="services__item service-card" style="background-image: url(img/services-3.jpg);">
@@ -201,7 +206,7 @@
                           <li class="service-card__item">Замена приводного ремня</li>
                         </ul>
                         <div class="service-card__btn-wrapper">
-                          <button class="service-card__btn">Записаться</button>
+                          <button class="service-card__btn btn" data-modal="#modal-form">Записаться</button>
                         </div>
                       </div>
                       <div class="services__item service-card" style="background-image: url(img/services-4.jpg);">
@@ -214,13 +219,2153 @@
                           <li class="service-card__item">Замена опорного подшипника</li>
                         </ul>
                         <div class="service-card__btn-wrapper">
-                          <button class="service-card__btn">Записаться</button>
+                          <button class="service-card__btn btn" data-modal="#modal-form">Записаться</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </section>
-                <section class="contacts" id="contacts">
+                <section class="price relative">
+                  <div class="anchor-offset" id="price"></div>
+                  <h2 class="title-section services__title">Цены</h2>
+                  <div class="container">
+                    <div class="price__inner">
+                      <table class="price__table table-price">
+                        <tbody>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Название услуги</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>Легковые автомобили (руб) </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>Джипы, микроавтобусы (руб) </p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">ДВИГАТЕЛЬ - ЦЕНЫ НА РЕМОНТ ДВИГАТЕЛЯ</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Капитальный ремонт 8 клапанов, классика </p>
+                              <p>Капитальный ремонт 16 клапанов</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>15500</p>
+                              <p>18000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>20000-100000</p>
+                              <p>22000-150000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Снятие и установка двигателя  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>8000-10000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>10000-25000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена поршневых колец  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>8000-10000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>8000-35000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена маслосъемных колпачков  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1800-3500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-30000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена клапанной прокладки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-1800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена успокоителя  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-10000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена башмака  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-25000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена цепи  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-25000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена натяжителя цепи  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-10000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Регулировка цепи( натяжка)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-6000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена переднего сальника (коленвала)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-2200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-25000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена сальника распредвала  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена распредвала  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200-2000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000-30000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена прокладки поддона  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-10000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена масляного насоса  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-15000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена заднего сальника (коленвала)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-15000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена ремня генератора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена помпы  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-2400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-15000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена прокладки головки блока  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>5000-7000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>5000-12000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена масла  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Промывка двигателя и замена масла  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена ремня ГРМ  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200-2200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-15000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена коллекторных прокладок  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3000-3500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-12000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена опоры двигателя 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена опоры двигателя кпп  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена свечей  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-7500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замер компрессии  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Установка защиты картера  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена масла в КПП  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена масла в АКПП  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена масла в мосту  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена воздушного фильтра  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>150</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена салонного фильтра  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена головки блока цилиндров  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>5000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>5000-15000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена гидрокомпенсаторов  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-9000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена заглушек блока цилиндров  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3000-6000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>9000-20000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена ремня гидроусилителя  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2600</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">РУЛЕВОЙ МЕХАНИЗМ - СТОИМОСТЬ РАБОТ ПО РЕМОНТУ РУЛЕВОГО МЕХАНИЗМА</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена рулевой тяги ( 1шт)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>850</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена средней рулевой тяги  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>750</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена маятника  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена рулевой трапеции (комплект)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000-3500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена рулевой рейки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-9000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена рулевой колонки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200-1800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000-3500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена кронштейна вала рулевого управления  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000-3500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена рулевой машинки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-7000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">ТРАНСМИССИЯ - ЦЕНЫ РЕМОНТА</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена сцепления  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-4000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3500-15000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена главного цилиндра сцепления  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена КПП  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2400-4000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3500-15000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена АКПП  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>5000-35000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>6000-45000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Переборка КПП  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>5000-6000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>6000-20000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена привода в сборе  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена пыльника привода внутреннего  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена пыльника привода наружнего  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена маховика  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3500-15000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена сальника привода  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1100</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1100-3500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена карданного вала  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>900</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-5500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена эластичной муфты кардана  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-5500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена подвесного подшипника  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-3500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена троса сцепления  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>350-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена троса спидометра  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена редуктора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000-7000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена сальника выбора передач  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-6000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена рабочего цилиндра сцепления  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена троса газа  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена датчика заднего хода  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена заднего сальника КПП  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-8000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена сальника редуктора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-3500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена прокладки редуктора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000-7000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена сальника КПП первичного вала  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2200-2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-12000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">ЭЛЕКТРОТЕХНИЧЕСКИЕ РАБОТЫ</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена генератора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена стартера  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена втягивающего реле  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена моторчика омывателя  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>250</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена механизма стеклоочистителя  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-4000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена блока предохранителей  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена замка зажигания  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена коммутатора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-700</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена тромблера  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Переборка трамблера  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Установить центр. замок 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-700</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена плат задних фонарей 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>200-400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Установка электроподъемника стекла 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена активатора или подъемника  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена косы (полностью)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>12000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>15000-50000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена передней блок-фары 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-4500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена заднего блок-фанаря 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена наружного зеркала заднего вида обычного  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>350-500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена наружн зеркала заднего вида с подогревом  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена щитка приборов ( С\У)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена рычага переключения поворотника  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>250-1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">ТОРМОЗНАЯ СИСТЕМА - ЦЕНЫ НА РАБОТЫ ПО РЕМОНТУ ТОРМОЗНОЙ СИСТЕМЫ</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена задних колодок  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена переднего тормозного цилиндра (1 шт)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1600</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена тормозного шланга с прокачкой (1 шт)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-900</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена вакуумного усилителя  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-6000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена троса ручного тормоза  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>900-1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена тормозного барабана ( 1 шт)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-600</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена регулятора давления  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена суппорта в сборе ( 1 шт)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена тормозного диска ( 1 шт)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Прокачка тормозной системы  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена главного тормозного цилиндра  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-900</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена педального узла  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3000-6000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена магистральной тормозной трубки (1 шт)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-4000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена тройника распредиления тормозов  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">СИСТЕМА ОХЛАЖДЕНИЯ - СТОИМОСТЬ ПРОВЕДЕНИЯ РАБОТ ПО РЕМОНТУ СИСТЕМЫ ОХЛАЖДЕНИЯ</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена радиатора (вентилятора)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-6000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена патрубка 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>150</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена тосола  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена крана отопителя  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>900-2000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200-8000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена печки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200-6000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-8000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена вентилятора печки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-6000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-4500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена датчика вентилятора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-600</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена датчика температуры  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>250-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена датчика масла  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>250-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена термостата  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена расширительного бачка  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>150</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>200-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена бачка омывателя стекол  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>150</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>150-500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена патрубка головки блока цилиндров  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>250</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>450</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена патрубка в радиатор отопителя салона  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-1800</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена отводящего шланга радиатора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-1600</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена ( снятие и установка торпеды )  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3000-6000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3000-12000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">ЗАДНЯЯ ПОДВЕСКА</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена 1-ой реактивной тяги  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена заднего амортизатора 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена задней пружины 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена подшипника 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1800-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена полуоси 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена задней балки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>4500-6000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена сайлентблоков задней балки( комплект)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000-4000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена реактивных тяг (комплект)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Переприсовка подшибника на полуоси 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">ПЕРЕДНЯЯ Подвеска</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена амортизаторов 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-900</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена 1-ой шаровой  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена верхнего рычага 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-4000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена нижнего рычага 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-4000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена подшипника ступицы 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-3200</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена передней пружины 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-5000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена стабилизатора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-1200</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена растяжки 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена переднего кронштейна 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена ступицы 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-4000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена передней балки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2000-3000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>4000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена опоры стоек 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>900</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена стоек стабилизатора 1 шт.  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>200-300</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>200-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена С.Б. верхнего рычага 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена С.Б. нижнего рычага  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">ТОПЛИВНАЯ система</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена карбюратора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Регулировка карбюратора (ремонт)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-4500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена топливного фильтра  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>100-500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена бензобака  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-8000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена шланга  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>250</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>200-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена воздушного фильтра  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>100</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена топливного насоса(электрический)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена топливного насоса(механический)  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>900</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена топливной трубки (магистральной) 1шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>900-10000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена топливного датчика  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-2000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Продувка топливной системы  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена дополнительного топливного фильтра  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>100</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>100</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена тормозной жидкости  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">ГЛУШИТЕЛЬ - ЦЕНЫ РЕМОНТА ГЛУШИТЕЛЕЙ</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена прокладки приемной трубы  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-4000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена приемной части  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-4000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена средней части  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена задней части  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>350-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена одного хомута  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>150</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>250</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Удаление болтов из коллектора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена прокладки коллектора  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row-title">
+                            <th class="table-price__col-title" colspan="3">АРМАТУРНЫЕ РАБОТЫ</th>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена лобового стекла 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена заднего стекла 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1200-2000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена бокового стекла 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>900</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена ключевины боковой двери 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>750</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена ключевины багажника 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>750</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена стеклоподъемника 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-900</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>900-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Установка локеров 4 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>700-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Установка фаркопа  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-5500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Установка брызговиков 2 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Электротехнические работы 1 час  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>980</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>980</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Арматурные работы 1 час  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>980</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>980</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Снятие и установка переднего бампера  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Снятие и установка заднего бампера  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Регулировка или ремонт замков 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>200-500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-800</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Снятие и установка обшивки двери 1 шт  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Ремонт двери с разборкой обшивки двери  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1000-2500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена двери с переборкой  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>1500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>3000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена дверной ручки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена троса воздушной заслонки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>400</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена троса привода замка капота  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>300-500</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Замена троса сцепления  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>350</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-2000</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Вскрытие двери  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-900</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>500-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Вскрытие капота  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-1000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Вскрытие багажника  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>600-1200</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>800-1500</p>
+                            </td>
+                          </tr>
+                          <tr class="table-price__row">
+                            <td class="table-price__col">
+                              <p>Сварочные работы со снятием задней балки  </p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>2500-6000</p>
+                            </td>
+                            <td class="table-price__col">
+                              <p>4000-9000</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="price__more-btn btn" data-name="Свернуть таблицу">Развернуть таблицу</div>
+                  </div>
+                </section>
+                <section class="contacts relative">
+                  <div class="anchor-offset" id="contacts"></div>
                   <h2 class="contacts__title title-section">Контакты</h2>
                   <div class="contacts__info info-contacts">
                     <div class="info-contacts__title">Контактная информация</div>
@@ -229,12 +2374,12 @@
                         <svg class="info-contacts__icon">
                           <use xlink:href="img/svg/sprite.svg#location"></use>
                         </svg>
-                        <div class="info-contacts__text">г. Владимир, ул. Красносельская, д. 1</div>
+                        <div class="info-contacts__text">г. Владимир, ул. Красносельская 57а</div>
                       </li>
                       <li class="info-contacts__item">
                         <svg class="info-contacts__icon">
                           <use xlink:href="img/svg/sprite.svg#phone-call"></use>
-                        </svg><a class="info-contacts__text" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                        </svg><a class="info-contacts__text" href="tel:+79106700292">+7 (910) 670-02-92</a>
                       </li>
                       <li class="info-contacts__item">
                         <svg class="info-contacts__icon">
@@ -244,16 +2389,66 @@
                       <li class="info-contacts__item">
                         <svg class="info-contacts__icon">
                           <use xlink:href="img/svg/sprite.svg#mail"></use>
-                        </svg><a class="info-contacts__text" href="mailto:service@mail.ru">service@mail.ru</a>
+                        </svg><a class="info-contacts__text" href="mailto:service@mail.ru">minohov33@mail.ru</a>
                       </li>
                     </ul>
                   </div>
-                  <div class="contacts__map" id="map" data-center="56.15729845689245,40.44173228880147" data-placemark="56.15751352241446,40.445472211330774"></div>
+                  <div class="contacts__map" id="map"></div>
                 </section>
       </main>
       <footer class="footer">
-        <div class="container"></div>
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__action"><a class="logo" href="#">
+                <svg class="logo__icon">
+                  <use xlink:href="img/svg/sprite.svg#logo"></use>
+                </svg><span class="logo__text">Чип и Дип</span></a>
+              <div class="call">
+                <svg class="call__icon">
+                  <use xlink:href="img/svg/sprite.svg#phone-call"></use>
+                </svg><a class="call__number" href="tel:+79106700292">+7 (910) 670-02-92</a>
+              </div>
+              <button class="btn footer__btn" data-modal="#modal-form">Оставить заявку</button>
+            </div>
+            <nav class="nav footer__nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#features">Преимущества</a></li>
+                <li class="nav__item"><a class="nav__link" href="#services">Услуги</a></li>
+                <li class="nav__item"><a class="nav__link" href="#price">Цены</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="footer__row">
+              <p class="footer__info">Чип и Дип - ремонт и покраска автомобилей любой сложности во Владимире | 2020 ©</p>
+            </div>
+          </div>
+        </div>
       </footer>
+            <div class="modal modal-form" id="modal-form" aria-hidden="true">
+              <div class="modal__wrap">
+                <div class="modal__window" role="dialog" aria-modal="true" aria-labelledby="Записаться на ремонт">
+                  <button class="modal__close" data-close="data-close" aria-label="Закрыть модальное окно">
+                    <svg class="modal__close-icon">
+                      <use xlink:href="img/svg/sprite.svg#cancel"></use>
+                    </svg>
+                  </button>
+                  <h1 class="modal__title">Оставить заявку</h1>
+                  <form class="form" method="POST" novalidate="true">
+                    <ul class="form__list">
+                      <li class="form__item">
+                        <label class="form__label" for="name">Имя</label>
+                        <input class="form__field" type="text" name="name" id="name" placeholder="Введите имя" required="required"/>
+                      </li>
+                      <li class="form__item">
+                        <label class="form__label" for="tel">Номер телефона</label>
+                        <input class="form__field" type="tel" name="tel" id="tel" placeholder="+7 (___) ___-__-__" required="required"/>
+                      </li>
+                    </ul>
+                    <button class="form__btn btn" type="submit" name="form-submit">Отправить</button>
+                  </form>
+                </div>
+              </div>
+            </div>
       <script src="https://api-maps.yandex.ru/2.1/?apikey=81fae96d-41d8-4ca8-a44a-8df50880c387&amp;lang=ru_RU"></script>
       <script src="js/main.js"></script>
     </div>

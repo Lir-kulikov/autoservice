@@ -1,28 +1,29 @@
 mixin services
-  section#services.services
+  section.services.relative
+    .anchor-offset#services
     .container
       h2.title-section.services__title Услуги
       .services__inner
         .services__item.service-card(style='background-image: url(img/services-1.jpg);')
-          .service-card__title Техническое обслуживание
+          .service-card__title Ремонт двигателя
           ul.service-card__list
-            li.service-card__item Замена воздушного фильтра
-            li.service-card__item Замена масляного насоса
-            li.service-card__item Замена масляного фильтра
-            li.service-card__item Замена помпы
-            li.service-card__item Замена приводного ремня
+            li.service-card__item Снятие и установка двигателя 
+            li.service-card__item Замена поршневых колец 
+            li.service-card__item Замена маслосъемных колпачков
+            li.service-card__item Замена клапанной прокладки
+            li.service-card__item Регулировка цепи
           .service-card__btn-wrapper
-            button.service-card__btn Записаться
+            button.service-card__btn.btn(data-modal='#modal-form') Записаться
         .services__item.service-card(style='background-image: url(img/services-2.jpg);')
-          .service-card__title Подвеска
+          .service-card__title Рулевой механизм
           ul.service-card__list
-            li.service-card__item Замена верхнего рычага подвески
-            li.service-card__item Замена втулок стабилизатора
-            li.service-card__item Замена заднего амортизатора
-            li.service-card__item Замена нижнего рычага подвески
-            li.service-card__item Замена опорного подшипника
+            li.service-card__item Замена рулевой тяги
+            li.service-card__item Замена маятника
+            li.service-card__item Замена рулевой трапеции
+            li.service-card__item Замена рулевой рейки 
+            li.service-card__item Замена рулевой колонки
           .service-card__btn-wrapper
-            button.service-card__btn Записаться
+            button.service-card__btn.btn(data-modal='#modal-form') Записаться
         .services__item.service-card(style='background-image: url(img/services-3.jpg);')
           .service-card__title Техническое обслуживание
           ul.service-card__list
@@ -32,37 +33,37 @@ mixin services
             li.service-card__item Замена помпы
             li.service-card__item Замена приводного ремня
           .service-card__btn-wrapper
-            button.service-card__btn Записаться
+            button.service-card__btn.btn(data-modal='#modal-form') Записаться
         .services__item.service-card(style='background-image: url(img/services-4.jpg);')
-          .service-card__title Подвеска
+          .service-card__title Трансмиссия
           ul.service-card__list
-            li.service-card__item Замена верхнего рычага подвески
-            li.service-card__item Замена втулок стабилизатора
-            li.service-card__item Замена заднего амортизатора
-            li.service-card__item Замена нижнего рычага подвески
-            li.service-card__item Замена опорного подшипника
+            li.service-card__item Замена сцепления 
+            li.service-card__item Замена и переборка КПП
+            li.service-card__item Замена карданного вала
+            li.service-card__item Замена троса сцепления 
+            li.service-card__item Замена датчика заднего хода 
           .service-card__btn-wrapper
-            button.service-card__btn Записаться
+            button.service-card__btn.btn(data-modal='#modal-form') Записаться
         .services__item.service-card(style='background-image: url(img/services-1.jpg);')
-          .service-card__title Техническое обслуживание
+          .service-card__title Электротехнические работы
           ul.service-card__list
-            li.service-card__item Замена воздушного фильтра
-            li.service-card__item Замена масляного насоса
-            li.service-card__item Замена масляного фильтра
-            li.service-card__item Замена помпы
-            li.service-card__item Замена приводного ремня
+            li.service-card__item Замена и переборка тромблера 
+            li.service-card__item Замена генератора 
+            li.service-card__item Замена стартера 
+            li.service-card__item Замена коммутатора 
+            li.service-card__item Замена щитка приборов
           .service-card__btn-wrapper
-            button.service-card__btn Записаться
+            button.service-card__btn.btn(data-modal='#modal-form') Записаться
         .services__item.service-card(style='background-image: url(img/services-2.jpg);')
-          .service-card__title Подвеска
+          .service-card__title Тормозная система
           ul.service-card__list
-            li.service-card__item Замена верхнего рычага подвески
-            li.service-card__item Замена втулок стабилизатора
+            li.service-card__item Замена троса ручного тормоза
+            li.service-card__item Замена задних колодок 
             li.service-card__item Замена заднего амортизатора
             li.service-card__item Замена нижнего рычага подвески
             li.service-card__item Замена опорного подшипника
           .service-card__btn-wrapper
-            button.service-card__btn Записаться
+            button.service-card__btn.btn(data-modal='#modal-form') Записаться
         .services__item.service-card(style='background-image: url(img/services-3.jpg);')
           .service-card__title Техническое обслуживание
           ul.service-card__list
@@ -72,7 +73,7 @@ mixin services
             li.service-card__item Замена помпы
             li.service-card__item Замена приводного ремня
           .service-card__btn-wrapper
-            button.service-card__btn Записаться
+            button.service-card__btn.btn(data-modal='#modal-form') Записаться
         .services__item.service-card(style='background-image: url(img/services-4.jpg);')
           .service-card__title Подвеска
           ul.service-card__list
@@ -82,4 +83,4 @@ mixin services
             li.service-card__item Замена нижнего рычага подвески
             li.service-card__item Замена опорного подшипника
           .service-card__btn-wrapper
-            button.service-card__btn Записаться
+            button.service-card__btn.btn(data-modal='#modal-form') Записаться

@@ -1,2 +1,25 @@
 footer.footer
   .container
+    .footer__inner
+      .footer__action
+        a.logo(href='#')
+          svg.logo__icon
+            use(xlink:href="img/svg/sprite.svg#logo")
+          span.logo__text Чип и Дип
+        .call
+          svg.call__icon
+              use(xlink:href="img/svg/sprite.svg#phone-call")
+          a.call__number(href='tel:+79106700292') +7 (910) 670-02-92
+        button.btn.footer__btn(data-modal='#modal-form') Оставить заявку
+      nav.nav.footer__nav
+        ul.nav__list
+          li.nav__item
+            a(href='#features').nav__link Преимущества
+          li.nav__item
+            a(href='#services').nav__link Услуги
+          li.nav__item
+            a(href='#price').nav__link Цены
+          li.nav__item
+            a(href='#contacts').nav__link Контакты
+      .footer__row
+        p.footer__info Чип и Дип - ремонт и покраска автомобилей любой сложности во Владимире | 2020 ©
