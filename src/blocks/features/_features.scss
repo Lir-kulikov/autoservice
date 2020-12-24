@@ -3,8 +3,8 @@
   padding-bottom: 100px;
 
   @include media('<desktop') {
-    padding-top: 70px;
-  padding-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
 
 
@@ -46,6 +46,10 @@
 }
 
 .feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
 
   &__icon {
@@ -53,15 +57,29 @@
     height: 100px;
     width: 100px;
     margin-bottom: 20px;
+
+    @include media('<tablet') {
+      height: 70px;
+      width: 70px;
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
     margin-bottom: 20px;
     font-size: 26px;
     font-weight: 600;
+
+    @include media('<tablet') {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
     font-size: 18px;
+    @include media('<tablet') {
+      font-size: 16px;
+    }
   }
 }
