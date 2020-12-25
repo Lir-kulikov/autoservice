@@ -1,55 +1,73 @@
 import ymapsTouchScroll from '../../node_modules/ymaps-touch-scroll/dist/ymaps-touch-scroll.js';
 
-ymaps.ready(init);
-function init(){
-    var map = document.querySelector('#map');
+document.addEventListener('DOMContentLoaded', () => {
 
-    var mark = [56.15691591312475,40.44542980786508];
+    let flag = 0;
 
-    var myMap = new ymaps.Map("map", {
-        center: [56.156934460025646,40.44484902984561],
-        zoom: 19,
-        controls: []
-    });
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const mapOffset = document.querySelector('#map').offsetTop;
+        if (scrollY >= mapOffset - 800 && flag === 0) {
 
-    myMap.controls.add('zoomControl', {
-      float: 'right',
-      position: {
-          right: 20,
-          top: 110
-     }
-  });
+            ymaps.ready(init);
 
-    var placemarkContent = ymaps.templateLayoutFactory.createClass(
-        '<div class="placemark-content" style="border-radius: 5px; padding: 5px; width: 90px; background-color: #fff; color: #000;">$[properties.iconContent]</div>'
-    );
+            function init() {
+                var map = document.querySelector('#map');
 
-    var placemark = new ymaps.Placemark(mark, {
-        iconContent: 'Автосервис Чип и Дип'
-    }, {
-        iconLayout: 'default#imageWithContent',
-        iconImageHref: 'img/placemark.png',
-        iconImageSize: [45, 50],
-        iconImageOffset: [-30, -50],
-        iconContentOffset: [50, 5],
-        iconContentLayout: placemarkContent
-    });
+                var mark = [56.15691591312475, 40.44542980786508];
 
-    myMap.geoObjects.add(placemark);
+                var myMap = new ymaps.Map("map", {
+                    center: [56.156934460025646, 40.44484902984561],
+                    zoom: 19,
+                    controls: []
+                });
 
-    function onResizeMap() {
-        if (window.innerWidth > 768) { 
-            //Set New center
-            myMap.setCenter([56.156934460025646,40.44484902984561]);
-            var pixelCenter2 = myMap.getGlobalPixelCenter('#map');
-            } else {
-                myMap.setCenter([56.15694493831349,40.445423022574786]);
+                myMap.controls.add('zoomControl', {
+                    float: 'right',
+                    position: {
+                        right: 20,
+                        top: 110
+                    }
+                });
+
+                var placemarkContent = ymaps.templateLayoutFactory.createClass(
+                    '<div class="placemark-content" style="border-radius: 5px; padding: 5px; width: 90px; background-color: #fff; color: #000;">$[properties.iconContent]</div>'
+                );
+
+                var placemark = new ymaps.Placemark(mark, {
+                    iconContent: 'Автосервис Чип и Дип'
+                }, {
+                    iconLayout: 'default#imageWithContent',
+                    iconImageHref: 'img/placemark.png',
+                    iconImageSize: [45, 50],
+                    iconImageOffset: [-30, -50],
+                    iconContentOffset: [50, 5],
+                    iconContentLayout: placemarkContent
+                });
+
+                myMap.geoObjects.add(placemark);
+
+                function onResizeMap() {
+                    if (window.innerWidth > 768) {
+                        //Set New center
+                        myMap.setCenter([56.156934460025646, 40.44484902984561]);
+                        var pixelCenter2 = myMap.getGlobalPixelCenter('#map');
+                    } else {
+                        myMap.setCenter([56.15694493831349, 40.445423022574786]);
+                    }
+                }
+                onResizeMap();
+
+                window.onresize = function () {
+                    onResizeMap();
+                };
+
+                ymapsTouchScroll(myMap);
             }
-        } onResizeMap();
 
-        window.onresize = function () {
-            onResizeMap();
+            flag = 1;
+
         };
+    });
 
-    ymapsTouchScroll(myMap);
-}
+});

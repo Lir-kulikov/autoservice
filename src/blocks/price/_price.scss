@@ -11,8 +11,10 @@
     position: relative;
     overflow-x: scroll;
     overflow-y: scroll;
+    max-width: 800px;
+    margin: 0 auto;
     max-height: 60vh;
-    transition: max-height .10s;
+    transition: max-height .3s;
 
     &.is-open {
       &::after {
@@ -50,9 +52,16 @@
 
 .table-price {
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
   border-collapse: collapse;
+
+  & tbody {
+    .table-price__row:first-child {
+      .table-price__col {
+        font-weight: 600;
+      }
+    }
+  }
 
   
 

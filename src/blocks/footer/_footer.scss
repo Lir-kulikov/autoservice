@@ -73,6 +73,10 @@
 
     .nav__link {
       color: #fff;
+      transition: color .2s;
+      &:hover {
+        color: #1c63b8;
+      }
       @include media('<tablet') {
         font-size: 18px;
       }
