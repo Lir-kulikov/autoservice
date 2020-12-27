@@ -182,7 +182,7 @@ const imgToApp = () => {
 
 const resources = () => {
 	return src('./src/resources/**')
-		.pipe(dest('./build'))
+		.pipe(dest('./build/resources'))
 }
 
 const clean = () => {

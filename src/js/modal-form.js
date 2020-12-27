@@ -6,15 +6,15 @@ import '../js/vendor/hystmodal.min'
 document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.querySelector('.form');
-  
+
   const serviceBtns = document.querySelectorAll('.service-card__btn');
-  
+
   for (let btn of serviceBtns) {
     const parent = btn.closest('.service-card');
     btn.addEventListener('focus', () => {
       parent.classList.add('is-active');
     });
-  
+
     btn.addEventListener('blur', () => {
       parent.classList.remove('is-active');
     });
@@ -50,33 +50,60 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   modalFormInit();
 
+  //fetch
+
+
+
   // validate on Blur
 
   const fixEmptyError = (form) => {
     let trySubmit = 0;
-    for(let item of form.elements) {
-      if(item.tagName == 'INPUT') {
+    for (let item of form.elements) {
+      if (item.tagName == 'INPUT') {
         item.addEventListener('blur', () => {
-          if(item.value == "" && trySubmit === 0) {
+          if (item.value == "" && trySubmit === 0) {
             item.classList.remove('error');
-            if(item.nextElementSibling.classList.contains('error-message')) {
+            if (item.nextElementSibling.classList.contains('error-message')) {
               item.nextElementSibling.parentNode.removeChild(item.nextElementSibling);
-            }
-            }
-        })
-      }
-    }
+            };
+          };
+        });
+      };
+    };
     form.addEventListener('bouncerFormInvalid', () => {
       trySubmit = 1;
-    })
-  }
+    });
+  };
   fixEmptyError(form);
+
+
+  form.addEventListener('submit', formSend);
+
+  async function formSend(e) {
+    let formData = new FormData(form);
+
+    let response = await fetch('../resources/mail.php', {
+      method: ('POST'),
+      body: FormData,
+    });
+
+    if (response.ok) {
+      let result = await response.json();
+      alert(result.message);
+      form.reset();
+    } else {
+      alert('Упс, что-то пошло не так');
+    }
+
+  };
+
+
 
   // modal init
 
   const myModal = new HystModal({
     linkAttributeName: 'data-modal',
-    afterClose: function(modal){
+    afterClose: function(modal) {
       for (let element of form.elements) {
         if (element.tagName == 'INPUT') {
           element.value = '';

@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
-        const mapOffset = document.querySelector('#map').offsetTop;
+        const mapOffset = document.querySelector('.contacts').offsetTop;
+
         if (scrollY >= mapOffset - 800 && flag === 0) {
 
             ymaps.ready(init);
