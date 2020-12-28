@@ -77,12 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
   fixEmptyError(form);
 
 
-  form.addEventListener('submit', formSend);
+  form.addEventListener('bouncerFormValid', formSend);
 
   async function formSend(e) {
     let formData = new FormData(form);
 
-    let response = await fetch('../resources/mail.php', {
+    let response = await fetch('mail.php', {
       method: ('POST'),
       body: FormData,
     });

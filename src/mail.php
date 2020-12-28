@@ -2,15 +2,15 @@
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
 
-  require 'phpmailer/src/Exception.php';
-  require 'phpmailer/src/PHPMailer.php';
+  require 'resources/phpmailer/src/Exception.php';
+  require 'resources/phpmailer/src/PHPMailer.php';
 
   $mail = new PHPMailer(true);
   $mail->CharSet = 'UTF-8';
   $mail->setLanguage('ru', 'phpmailer/language/');
   $mail->IsHTML(true);
 
-  $mail->setFrom('kulikov.lir@yandex.ru', 'Чип и Дип');
+  $mail->setFrom('info@chipdip33.ru', 'Чип и Дип');
   $mail->addAdress('milan7457@yandex.ru');
   $mail->Subject = 'Привет';
 

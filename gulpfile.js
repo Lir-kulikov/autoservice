@@ -311,3 +311,27 @@ exports.build = series(clean, parallel(pug2html, scriptsBuild, fonts, resources,
 ghpages.publish('build', {
 	message: 'Auto-generated commit'
 });
+
+// deploy
+// const deploy = () => {
+// 	let conn = ftp.create({
+// 		host: '77.222.61.25',
+// 		user: 'milan7457y',
+// 		password: 'tnIP1Syqq',
+// 		parallel: 10,
+// 		log: gutil.log
+// 	});
+
+// 	let globs = [
+// 		'app/**',
+// 	];
+
+// 	return src(globs, {
+// 			base: './build',
+// 			buffer: false
+// 		})
+// 		.pipe(conn.newer('')) // only upload newer files
+// 		.pipe(conn.dest('/home/m/milan7457y/public_html/'));
+// }
+
+// exports.deploy = deploy;

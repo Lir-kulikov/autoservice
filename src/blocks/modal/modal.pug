@@ -6,7 +6,7 @@ mixin modal
           svg.modal__close-icon
             use(xlink:href="img/svg/sprite.svg#cancel")
         h1.modal__title Оставить заявку
-        form.form(method="POST" novalidate="true")
+        form.form(method="POST" action="mail.php")
           ul.form__list
             li.form__item
               label.form__label(for='name') Имя

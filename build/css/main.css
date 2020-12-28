@@ -83,6 +83,14 @@ input[type=text]::-ms-clear {
   font-display: swap;
   font-family: "ProximaNova";
   font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ProximaNova";
+  font-style: normal;
   font-weight: 400;
   src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff");
 }
@@ -93,14 +101,6 @@ input[type=text]::-ms-clear {
   font-style: normal;
   font-weight: 600;
   src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "ProximaNova";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
 }
 
 input::-webkit-outer-spin-button,
@@ -1195,7 +1195,9 @@ body {
 .modal__close {
   display: block;
   position: absolute;
-  padding: 20px;
+  padding: 10px;
+  width: 45px;
+  height: 45px;
   top: 10px;
   right: 10px;
   cursor: pointer;
@@ -1203,14 +1205,16 @@ body {
 
 @media (max-width: 767px) {
   .modal__close {
-    padding: 10px;
+    padding: 0;
+    width: 35px;
+    height: 35px;
   }
 }
 
 .modal__close-icon {
   fill: #000;
-  height: 24px;
-  width: 24px;
+  height: 100%;
+  width: 100%;
 }
 
 .modal__title {
