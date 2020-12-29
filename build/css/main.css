@@ -113,6 +113,10 @@ body {
   font-family: var(--font-base);
 }
 
+body.is-fixed {
+  overflow: hidden;
+}
+
 .anchor-offset {
   position: absolute;
   top: -70px;
@@ -281,6 +285,7 @@ body {
 @media (max-width: 767px) {
   .adress {
     display: flex;
+    margin-right: 0;
   }
 }
 
@@ -434,7 +439,7 @@ body {
     padding-left: 30px;
     padding-right: 10px;
     margin-right: -10px;
-    padding-bottom: 16px;
+    padding-bottom: 9px;
     margin-bottom: 40px;
   }
   .mobile-menu__close {
@@ -569,6 +574,12 @@ body {
   flex-shrink: 0;
   text-decoration: none;
   white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    z-index: 3;
+  }
 }
 
 .logo__icon {
@@ -1201,14 +1212,6 @@ body {
   top: 10px;
   right: 10px;
   cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .modal__close {
-    padding: 0;
-    width: 35px;
-    height: 35px;
-  }
 }
 
 .modal__close-icon {

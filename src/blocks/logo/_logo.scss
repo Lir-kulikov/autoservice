@@ -5,6 +5,10 @@
   text-decoration: none;
   white-space: nowrap;
 
+  @include media('<tablet') {
+    z-index: 3;
+  }
+
   &__icon {
     vertical-align: middle;
     height: 50px;

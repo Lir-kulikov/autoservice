@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('nav');
   const links = nav.querySelectorAll('a[href*="#"]');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const body = document.querySelector('body');
   
   
   for (let link of links) {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('is-open');
+      body.classList.remove('is-fixed');
     });
   };
 });

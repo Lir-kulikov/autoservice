@@ -15,6 +15,9 @@ input::-webkit-inner-spin-button {
 
 body {
   font-family: var(--font-base);
+  &.is-fixed {
+    overflow: hidden;
+  }
 }
 
 .anchor-offset {

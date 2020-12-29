@@ -7,11 +7,11 @@
 
   $mail = new PHPMailer(true);
   $mail->CharSet = 'UTF-8';
-  $mail->setLanguage('ru', 'phpmailer/language/');
+  $mail->setLanguage('ru', 'resources/phpmailer/language/');
   $mail->IsHTML(true);
 
   $mail->setFrom('info@chipdip33.ru', 'Чип и Дип');
-  $mail->addAdress('milan7457@yandex.ru');
+  $mail->addAddress('milan7457@yandex.ru');
   $mail->Subject = 'Привет';
 
   $body = '<h1>Тело письма</h1>';
@@ -22,6 +22,8 @@
   if(trim(!empty($_POST['tel']))){
     $body.='<p><strong>Имя</strong> '.$_POST['tel'].'</p>';
   }
+
+  $mail->Body = $body;
 
   if(!$mail->send()) {
     $message = 'Ошибка';
