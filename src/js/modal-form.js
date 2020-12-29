@@ -78,13 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   form.addEventListener('bouncerFormValid', formSend);
+  let formData = new FormData(form);
 
   async function formSend(e) {
     let formData = new FormData(form);
-
+    console.log(formData);
     let response = await fetch('mail.php', {
-      method: ('POST'),
-      body: FormData,
+      method: 'POST',
+      body: formData,
     });
 
     if (response.ok) {
@@ -94,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       alert('Упс, что-то пошло не так');
     }
-
   };
 
 
