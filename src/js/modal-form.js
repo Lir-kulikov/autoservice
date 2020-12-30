@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   form.addEventListener('bouncerFormValid', formSend);
-  
+  document.querySelector('.modal__window').classList.add('is-loading');
   let formData = new FormData(form);
 
   async function formSend(e) {
@@ -92,8 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
       myModal.open('#modal-succes');
       setTimeout(() => myModal.close(), 3000)
       form.reset();
+      document.querySelector('.modal__window').classList.remove('is-loading');
     } else {
       alert('Упс, что-то пошло не так');
+      document.querySelector('.modal__window').classList.remove('is-loading');
     }
   };
 

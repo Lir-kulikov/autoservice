@@ -73,18 +73,10 @@ input[type=text]::-ms-clear {
 
 @font-face {
   font-display: swap;
-  font-family: "ProximaNova";
+  font-family: "PTRoubleSans";
   font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "ProximaNova";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff");
+  font-weight: 400;
+  src: url("../fonts/PTRoubleSans-Regular.woff2") format("woff2"), url("../fonts/PTRoubleSans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -97,10 +89,18 @@ input[type=text]::-ms-clear {
 
 @font-face {
   font-display: swap;
-  font-family: "PTRoubleSans";
+  font-family: "ProximaNova";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/PTRoubleSans-Regular.woff2") format("woff2"), url("../fonts/PTRoubleSans-Regular.woff") format("woff");
+  font-weight: 300;
+  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff");
 }
 
 input::-webkit-outer-spin-button,
@@ -1202,9 +1202,9 @@ body.is-fixed {
 }
 
 .modal__window {
+  position: relative;
   padding: 30px 40px 40px 40px;
   margin: 50px 0;
-  box-sizing: border-box;
   flex-shrink: 0;
   flex-grow: 0;
   background: #fff;
@@ -1214,6 +1214,19 @@ body.is-fixed {
   transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
   transform: scale(0.9);
   opacity: 0;
+}
+
+.modal__window.is-loading::after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25) url(../img/loading.svg) center/50px no-repeat;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .2s;
 }
 
 @media (max-width: 767px) {
