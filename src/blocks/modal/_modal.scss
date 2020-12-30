@@ -126,6 +126,11 @@
       margin-bottom: 10px;
     }
   }
+
+  &__text {
+    font-size: 18px;
+    text-align: center;
+  }
 }
 
 .form {
@@ -173,4 +178,16 @@
 .error-message {
   position: absolute;
   color: rgb(231, 46, 0);
+}
+
+.modal-succes__icon {
+  margin: 30px auto 30px auto;
+  display: block;
+  height: 100px;
+  width: 100px;
+
+  @include media('<tablet') {
+    height: 70px;
+    width: 70px;
+  }
 }

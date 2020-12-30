@@ -50,10 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   modalFormInit();
 
-  //fetch
-
-
-
   // validate on Blur
 
   const fixEmptyError = (form) => {
@@ -78,9 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   form.addEventListener('bouncerFormValid', formSend);
+  
   let formData = new FormData(form);
 
   async function formSend(e) {
+    form.reset();
+
     let formData = new FormData(form);
     console.log(formData);
     let response = await fetch('mail.php', {
@@ -90,7 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (response.ok) {
       let result = await response.json();
-      alert(result.message);
+      myModal.open('#modal-succes');
+      setTimeout(() => myModal.close(), 3000)
       form.reset();
     } else {
       alert('Упс, что-то пошло не так');
@@ -104,13 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const myModal = new HystModal({
     linkAttributeName: 'data-modal',
     afterClose: function(modal) {
-      for (let element of form.elements) {
-        if (element.tagName == 'INPUT') {
-          element.value = '';
-          modalForm.destroy();
-          modalFormInit();
-        };
-      };
+      form.reset();
+      modalForm.destroy();
+      modalFormInit();
     }
   });
 });

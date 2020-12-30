@@ -73,18 +73,18 @@ input[type=text]::-ms-clear {
 
 @font-face {
   font-display: swap;
-  font-family: "PTRoubleSans";
+  font-family: "ProximaNova";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/PTRoubleSans-Regular.woff2") format("woff2"), url("../fonts/PTRoubleSans-Regular.woff") format("woff");
+  font-weight: 300;
+  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
 }
 
 @font-face {
   font-display: swap;
   font-family: "ProximaNova";
   font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
+  font-weight: 600;
+  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff");
 }
 
 @font-face {
@@ -97,10 +97,10 @@ input[type=text]::-ms-clear {
 
 @font-face {
   font-display: swap;
-  font-family: "ProximaNova";
+  font-family: "PTRoubleSans";
   font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff");
+  font-weight: 400;
+  src: url("../fonts/PTRoubleSans-Regular.woff2") format("woff2"), url("../fonts/PTRoubleSans-Regular.woff") format("woff");
 }
 
 input::-webkit-outer-spin-button,
@@ -1263,6 +1263,11 @@ body.is-fixed {
   }
 }
 
+.modal__text {
+  font-size: 18px;
+  text-align: center;
+}
+
 .form {
   margin: 0;
 }
@@ -1310,6 +1315,20 @@ body.is-fixed {
 .error-message {
   position: absolute;
   color: #e72e00;
+}
+
+.modal-succes__icon {
+  margin: 30px auto 30px auto;
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+
+@media (max-width: 767px) {
+  .modal-succes__icon {
+    height: 70px;
+    width: 70px;
+  }
 }
 
 .err404 {
