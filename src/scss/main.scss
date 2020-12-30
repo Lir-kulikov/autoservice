@@ -74,6 +74,7 @@ body {
 .btn {
   color: #fff;
   background-color: #1c63b8;
+  text-decoration: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
@@ -96,4 +97,5 @@ body {
 @import '../blocks/price/_price';
 @import '../blocks/contacts/_contacts';
 @import '../blocks/modal/_modal';
+@import '../blocks/err404/_err404';
 

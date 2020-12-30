@@ -1,0 +1,9 @@
+extends partials/layout.pug
+block vars
+  -var title='Страница не найдена'
+block content
+  .err404
+    .container
+      img.err404__img(src='img/404.jpg')
+      h1.err404__title.title-section Страница не найдена
+      a.err404__link.btn(href='index.html') Вернуться на главную

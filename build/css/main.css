@@ -177,6 +177,7 @@ body.is-fixed {
 .btn {
   color: #fff;
   background-color: #1c63b8;
+  text-decoration: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
@@ -1284,4 +1285,52 @@ body.is-fixed {
 .error-message {
   position: absolute;
   color: #e72e00;
+}
+
+.err404 {
+  text-align: center;
+  padding-top: 110px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 1279px) {
+  .err404 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .err404 {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+}
+
+.err404__img {
+  max-width: 800px;
+  width: 100%;
+  display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  .err404__img {
+    margin-bottom: 30px;
+  }
+}
+
+.err404__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.err404__link {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }
