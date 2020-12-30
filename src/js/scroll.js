@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const nav = document.querySelector('nav');
   const links = nav.querySelectorAll('a[href*="#"]');
-  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileMenu = document.querySelector('.header__group');
   const body = document.querySelector('body');
   
   

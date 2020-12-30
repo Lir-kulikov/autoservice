@@ -15,12 +15,72 @@
     align-items: center;
 
     @include media('<tablet') {
+      display: block;
       padding: 4px 0;
+    }
+  }
+
+  &__logo-wrapper {
+    @include media('<tablet') {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+
+    @include media('<tablet') {
+      position: absolute;
+      top: 59px;
+      right: 0;
+      display: block;
+      height: calc(100vh - 55px);
+      overflow-x: hidden;
+      overflow-y: scroll;
+      width: 320px;
+      background-color: rgba($color: rgb(255, 255, 255), $alpha: 0.97);
+      transform: translateX(100%);
+      transition: transform .2s;
+      padding: 30px 10px 30px 30px;
+
+      &.is-open {
+        transform: translateX(0);
+      }
+
+      @include media('<320px') {
+        width: 100%;
+      }
     }
   }
 
   &__info {
     display: flex;
+
+    @include media('<tablet') {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__nav {
+    margin-right: 90px;
+
+    @include media('<desktop') {
+      margin-right: calc(59vw - 450px);
+    }
+
+    @include media('<800px') {
+      margin-right: calc(61vw - 450px);
+    }
+
+    @include media('<tablet') {
+      
+    }
   }
 
 }
@@ -157,10 +217,10 @@
 }
 
 .burger {
-  padding: 5px;
+  padding: 10px;
   position: relative;
-  width: 24px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   display: none;
 
@@ -170,10 +230,11 @@
 
   &__line {
     position: absolute;
-    top: 11px;
-    left: 0;
+    transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+    left: 50%;
     display: block;
-    width: 24px;
+    width: 23px;
     height: 3px;
     background-color: #000;
     transition: transform .2s;
@@ -182,8 +243,9 @@
   &::before,
   &::after {
     position: absolute;
-    left: 0;
-    width: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 23px;
     height: 3px;
     background-color: #000;
     content: '';
@@ -191,61 +253,25 @@
   }
 
   &::before {
-    top: 2px;
+    top: 6px;
   }
 
   &::after {
-    bottom: 2px;
+    bottom: 6px;
   }
-}
 
-.mobile-menu {
-  display: none;
-
-  @include media('<tablet') {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    width: 320px;
-    padding: 13px 10px 30px 30px;
-    background-color: rgba($color: rgb(255, 255, 255), $alpha: 0.97);
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    transition: transform .2s;
-
-    @include media('<320px') {
-      width: 100%;
+  &.is-open {
+    &::before {
+      top: 6;
+      left: 30%;
+      transform: rotate(45deg) scaleX(0.5) translateX(53%);
     }
 
-
-    &.is-open {
-      transform: translateX(0);
+    &::after {
+      bottom: 6;
+      transform: rotate(-45deg) scaleX(0.5) translateX(53%);
+      left: 30%;
     }
-
-    &__top {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-      display: flex;
-      margin-left: -30px;
-      padding-left: 30px;
-      padding-right: 10px;
-      margin-right: -10px;
-      padding-bottom: 9px;
-      margin-bottom: 40px;
-    }
-
-    &__close {
-      padding: 0;
-      margin-left: auto;
-      &-icon {
-        width: 30px;
-        height: 30px;
-        fill: #000;
-      }
-    }
-
   }
 }
 

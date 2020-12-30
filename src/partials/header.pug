@@ -2,34 +2,31 @@ mixin header
   header.header
     .container
       .header__inner
-        a.logo(href='#')
-          svg.logo__icon
-            use(xlink:href="img/svg/sprite.svg#logo")
-          span.logo__text Чип и Дип
-        nav.nav(data-da="mobile-menu, 1, 767.7")
-          ul.nav__list
-            li.nav__item
-              a(href='#features').nav__link Преимущества
-            li.nav__item
-              a(href='#services').nav__link Услуги
-            li.nav__item
-              a(href='#price').nav__link Цены
-            li.nav__item
-              a(href='#contacts').nav__link Контакты
-        .header__info
-          .adress(data-da="mobile-menu, 3, 767.7")
-            svg.adress__icon
-              use(xlink:href="img/svg/sprite.svg#location")
-            .adress__inner г. Владимир, <br> ул. Красносельская, д. 57а
-          .call(data-da="mobile-menu, 2, 767.8")
-            svg.call__icon
-                use(xlink:href="img/svg/sprite.svg#phone-call")
-            a.call__number(href='tel:+79106700292') +7 (910) 670-02-92
-        button.burger
-          span.burger__line
-        .mobile-menu
-          .mobile-menu__top
-            button.mobile-menu__close
-              svg.mobile-menu__close-icon
-                use(xlink:href="img/svg/sprite.svg#right-arrow")
+        .header__logo-wrapper
+          a.logo(href='#')
+            svg.logo__icon
+              use(xlink:href="img/svg/sprite.svg#logo")
+            span.logo__text Чип и Дип
+          button.burger
+            span.burger__line
+        .header__group
+          nav.nav.header__nav
+            ul.nav__list
+              li.nav__item
+                a(href='#features').nav__link Преимущества
+              li.nav__item
+                a(href='#services').nav__link Услуги
+              li.nav__item
+                a(href='#price').nav__link Цены
+              li.nav__item
+                a(href='#contacts').nav__link Контакты
+          .header__info
+            .adress
+              svg.adress__icon
+                use(xlink:href="img/svg/sprite.svg#location")
+              .adress__inner г. Владимир, <br> ул. Красносельская, д. 57а
+            .call(data-da="mobile-menu, 2, 767.8")
+              svg.call__icon
+                  use(xlink:href="img/svg/sprite.svg#phone-call")
+              a.call__number(href='tel:+79106700292') +7 (910) 670-02-92
           

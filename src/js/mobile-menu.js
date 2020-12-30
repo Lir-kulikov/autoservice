@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
-  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileMenu = document.querySelector('.header__group');
   const mobileMenuClose = document.querySelector('.mobile-menu__close');
   const body = document.querySelector('body');
 
