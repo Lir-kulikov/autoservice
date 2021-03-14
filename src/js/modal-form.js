@@ -78,10 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let formData = new FormData(form);
 
   async function formSend(e) {
-    form.reset();
 
     let formData = new FormData(form);
-    console.log(formData);
+ 
     let response = await fetch('mail.php', {
       method: 'POST',
       body: formData,

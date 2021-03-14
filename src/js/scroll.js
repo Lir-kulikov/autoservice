@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = nav.querySelectorAll('a[href*="#"]');
   const mobileMenu = document.querySelector('.header__group');
   const body = document.querySelector('body');
+  const burger = document.querySelector('.burger');
   
   
   for (let link of links) {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('is-open');
       body.classList.remove('is-fixed');
+      burger.classList.remove('is-open');
     });
   };
 });
